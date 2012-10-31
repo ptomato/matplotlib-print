@@ -87,13 +87,13 @@ class PrintSetupDialogTk(_Dialog):
     """
     def __init__(self, parent, auto, fit, dpi, printer):
         self.success = False
-        self.auto = tk.BooleanVar()
+        self.auto = tk.BooleanVar(master=parent)
         self.auto.set(auto)
-        self.fit = tk.BooleanVar()
+        self.fit = tk.BooleanVar(master=parent)
         self.fit.set(fit)
-        self.dpi = tk.StringVar()
+        self.dpi = tk.StringVar(master=parent)
         self.dpi.set(str(dpi))
-        self.printer = tk.StringVar()
+        self.printer = tk.StringVar(master=parent)
         self.printer.set(printer)
         _Dialog.__init__(self, parent, title='Print Setup')
 
